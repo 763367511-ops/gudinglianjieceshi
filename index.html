@@ -87,8 +87,8 @@ body{font-family:'Microsoft YaHei','PingFang SC',system-ui,sans-serif;background
 <div class="search-results" id="searchResults"></div>
 </div>
 <script>
-const catMeta={"c0": {"label": "第一次", "color": "#2B6CB0", "bg": "#ebf4ff"}};
-const words={"c0": [{"word": "apple", "ph": "/ˈæp.əl/", "mn": "苹果", "ic": "🍎"}, {"word": "banana", "ph": "/bəˈnɑː.nə/", "mn": "香蕉", "ic": "🍌"}, {"word": "orange", "ph": "/ˈɒr.ɪndʒ/", "mn": "橙子", "ic": "🍊"}]};
+const catMeta={"c0": {"label": "第二次", "color": "#2B6CB0", "bg": "#ebf4ff"}};
+const words={"c0": [{"word": "dog", "ph": "/dɒɡ/", "mn": "狗", "ic": "🐶"}, {"word": "cat", "ph": "/kæt/", "mn": "猫", "ic": "🐱"}, {"word": "bird", "ph": "/bɜːd/", "mn": "鸟", "ic": "🐦"}]};
 const anims=['animation:bounce 0.8s infinite','animation:spin 1s linear infinite','animation:pulse 0.7s infinite','animation:float 1.2s infinite','animation:shake 0.5s infinite','animation:wave 0.8s infinite','animation:swing 1s infinite'];
 let currentCat=Object.keys(catMeta)[0],currentWord=null,animTimer=null;
 function playWord(rate){if(!currentWord)return;const au=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(currentWord.word)+'&type=1');au.playbackRate=rate;au.play().catch(()=>{if('speechSynthesis' in window){const u=new SpeechSynthesisUtterance(currentWord.word);u.lang='en-US';u.rate=rate;speechSynthesis.speak(u);}});}
